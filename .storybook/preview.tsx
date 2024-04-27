@@ -1,9 +1,14 @@
 import type { Preview } from "@storybook/react";
+import {
+  INITIAL_VIEWPORTS,
+  MINIMAL_VIEWPORTS,
+} from "@storybook/addon-viewport";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import { handler } from "../mocks/handler";
 import React from "react";
 import "destyle.css";
 import "../src/index.css";
+import "./storybook.css";
 
 initialize({
   onUnhandledRequest: "bypass",
@@ -19,6 +24,12 @@ const preview: Preview = {
     },
     msw: {
       handlers: [handler],
+    },
+    viewport: {
+      viewports: {
+        ...INITIAL_VIEWPORTS,
+        ...MINIMAL_VIEWPORTS,
+      },
     },
   },
   loaders: [mswLoader],

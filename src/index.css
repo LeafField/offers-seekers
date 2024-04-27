@@ -1,3 +1,8 @@
+:root {
+  --base-line: #aeaeae;
+  --label-color: #333333;
+}
+
 body {
   font-family: "Noto Serif JP", serif;
   font-weight: 400;

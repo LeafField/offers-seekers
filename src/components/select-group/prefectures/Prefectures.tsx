@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "../Prefectures.module.css";
+import styles from "./Prefectures.module.css";
 import useSWRImmutable from "swr/immutable";
 import { prefecturesFetcher } from "../../../lib/fetcher";
 

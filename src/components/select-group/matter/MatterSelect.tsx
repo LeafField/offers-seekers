@@ -1,13 +1,26 @@
-import { FC } from "react";
+import { ChangeEvent, FC } from "react";
 import styles from "./MatterSelect.module.css";
+import { useStore } from "../../../store/useStore";
 
 const MatterSelect: FC = () => {
+  const { resasParameters, setResasParameters } = useStore();
+
+  const changeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+    setResasParameters({ matter: e.target.value });
+  };
+
   return (
     <div className={styles.container}>
-      <label htmlFor="year" className={styles.label}>
+      <label htmlFor="matter" className={styles.label}>
         表示内容
       </label>
-      <select name="year" id="year" className={styles.matter}>
+      <select
+        name="matter"
+        id="matter"
+        className={styles.matter}
+        value={resasParameters.matter}
+        onChange={changeHandler}
+      >
         <option value="1">有効求職者数（総数）</option>
         <option value="2">有効求職者数（男性）</option>
         <option value="3">有効求職者数（女性）</option>

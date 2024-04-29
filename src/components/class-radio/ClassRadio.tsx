@@ -1,11 +1,13 @@
-import { ChangeEvent, FC, useState } from "react";
+import { ChangeEvent, FC } from "react";
 import styles from "./ClassRadio.module.css";
 import { radioData } from "./RadioData";
+import { useStore } from "../../store/useStore";
 
 const ClassRadio: FC = () => {
-  const [test, setTest] = useState("1");
+  const { resasParameters, setResasParameters } = useStore();
+
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setTest(e.target.value);
+    setResasParameters({ class: e.target.value });
   };
   return (
     <div role="group" className={styles.container}>
@@ -16,7 +18,7 @@ const ClassRadio: FC = () => {
             name="class"
             id={radio.id}
             value={radio.value}
-            checked={test === radio.value}
+            checked={resasParameters.class === radio.value}
             onChange={changeHandler}
             className={styles.radio}
             key={radio.id}

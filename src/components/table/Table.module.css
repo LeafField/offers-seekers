@@ -1,0 +1,14 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.right {
+  text-align: right;
+}
+
+.right,
+.left {
+  padding-bottom: 0.5rem;
+  padding-inline: 0.5rem;
+}

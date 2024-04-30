@@ -1,9 +1,11 @@
 import { ChangeEvent, FC } from "react";
 import styles from "./MatterSelect.module.css";
 import { useStore } from "../../../store/useStore";
+import useNavHidden from "../../../hooks/useNavHidden";
 
 const MatterSelect: FC = () => {
   const { resasParameters, setResasParameters } = useStore();
+  const { hidden, navOpen } = useNavHidden();
 
   const changeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     setResasParameters({ matter: e.target.value });
@@ -20,6 +22,7 @@ const MatterSelect: FC = () => {
         className={styles.matter}
         value={resasParameters.matter}
         onChange={changeHandler}
+        tabIndex={hidden && !navOpen ? -1 : 0}
       >
         <option value="1">有効求職者数（総数）</option>
         <option value="2">有効求職者数（男性）</option>

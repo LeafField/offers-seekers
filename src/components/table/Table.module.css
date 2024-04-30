@@ -11,4 +11,12 @@
 .left {
   padding-bottom: 0.5rem;
   padding-inline: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.main {
+  flex-grow: 1;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.625rem;
 }

@@ -13,9 +13,6 @@ type Story = StoryObj<typeof meta>;
 export const PC: Story = {
   parameters: {
     layout: "centered",
-    viewport: {
-      defaultViewport: "desktop",
-    },
   },
   decorators: (Story) => (
     <div

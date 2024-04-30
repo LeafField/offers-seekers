@@ -14,7 +14,7 @@ const Table: FC = () => {
   );
 
   return (
-    <main>
+    <main className={styles.main}>
       <table className={styles.table}>
         <thead>
           <tr>

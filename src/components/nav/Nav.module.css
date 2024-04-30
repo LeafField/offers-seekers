@@ -1,5 +1,10 @@
 .nav {
-  width: 15.625rem;
+  background-color: white;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  position: sticky;
+  top: 0.5rem;
 }
 
 .container {

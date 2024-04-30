@@ -11,7 +11,7 @@
 .left {
   padding-bottom: 0.5rem;
   padding-inline: 0.5rem;
-  font-size: 1.25rem;
+  font-size: var(--column-text);
 }
 
 .main {

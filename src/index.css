@@ -2,6 +2,7 @@
   --base-line: #aeaeae;
   --label-color: #333333;
   --body-color: #ecf5ff;
+  --column-text: clamp(0.75rem, 4vw, 1.25rem);
 }
 
 body {

@@ -38,6 +38,7 @@
     align-items: center;
     background-color: transparent;
     z-index: 1;
+    touch-action: none;
   }
 
   .container {

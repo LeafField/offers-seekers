@@ -9,6 +9,7 @@ describe("ClassRadioコンポーネントの単体テスト", () => {
   });
 
   test("コンポーネントが正しくレンダリングされているか", () => {
+    expect.assertions(2);
     radioData.forEach((radio) => {
       expect(screen.getByRole("radio", { name: radio.label })).toBeDefined();
     });

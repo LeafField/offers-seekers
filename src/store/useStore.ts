@@ -7,13 +7,9 @@ type ResasParameters = {
   class: string;
 };
 
-type ResasValue = Partial<{
-  [K in keyof ResasParameters]: ResasParameters[K];
-}>;
-
 type Store = {
   resasParameters: ResasParameters;
-  setResasParameters: (value: ResasValue) => void;
+  setResasParameters: (value: Partial<ResasParameters>) => void;
   navOpen: boolean;
   setNavOpen: (value: boolean) => void;
 };

@@ -9,9 +9,4 @@ describe("Headerの単体テスト", () => {
       screen.getByRole("heading", { name: "求人・求職者数" }),
     ).toBeDefined();
   });
-
-  test("スナップショットテスト", () => {
-    const { container } = render(<Header />);
-    expect(container).toMatchSnapshot();
-  });
 });

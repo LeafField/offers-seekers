@@ -17,7 +17,7 @@ export const PC: Story = {
   decorators: (Story) => (
     <div
       style={{
-        width: "400px",
+        width: "686px",
       }}
     >
       <Story />

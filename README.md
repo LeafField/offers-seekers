@@ -5,6 +5,10 @@
 - RESAS API
   VITE_API_KEY=RESAS APIのAPI KEYを入れてください。
 
+## 開発開始日
+
+2024年4月27日
+
 ## 実行コマンド
 
 初めに
@@ -17,7 +21,7 @@ npm i
 
 - devサーバー
 
-```bash
+```
 npm run dev
 ```
 
@@ -27,7 +31,7 @@ npm run dev
 npm run build
 ```
 
-- 静的解析
+- 静的解析（Prettier、ESLint、TypeScript）
 
 ```
 npm run check
@@ -43,4 +47,11 @@ npm run storybook
 
 ```
 npm test
+```
+
+- E2Eテスト
+  ビルド後に
+
+```
+npm run e2e
 ```

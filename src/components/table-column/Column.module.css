@@ -1,0 +1,20 @@
+.right {
+  text-align: right;
+}
+
+.column {
+  border-top: 1px solid var(--label-color);
+  border-bottom: 1px solid var(--label-color);
+}
+
+.column:nth-child(odd) {
+  background-color: rgb(240, 240, 240);
+}
+
+.left,
+.right {
+  padding-top: 1.5rem;
+  padding-bottom: 0.325rem;
+  padding-inline: 0.5rem;
+  font-size: var(--column-text);
+}

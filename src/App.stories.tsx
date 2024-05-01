@@ -10,4 +10,12 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {};
+export const PC: Story = {};
+
+export const Mobile: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: "iphone6",
+    },
+  },
+};

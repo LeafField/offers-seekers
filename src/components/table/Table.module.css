@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.right {
+  text-align: right;
+}
+
+.right,
+.left {
+  padding-bottom: 0.5rem;
+  padding-inline: 0.5rem;
+  font-size: var(--column-text);
+}
+
+.main {
+  flex-grow: 1;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.625rem;
+}

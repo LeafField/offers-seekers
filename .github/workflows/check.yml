@@ -1,10 +1,8 @@
 name: typecheck and lint and format and unit testing
 
 on:
-  push:
-    branches: ["master"]
   pull_request:
-    branches: ["master", "feature"]
+    branches: ["master"]
 
 jobs:
   check:

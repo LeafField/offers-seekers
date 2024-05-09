@@ -11,8 +11,9 @@ export default defineConfig({
     environment: "happy-dom",
     setupFiles: "./vitest.setup.ts",
     coverage: {
-      include: ["src/**/*.test.ts", "src/**/*.test.tsx"],
+      include: ["src/**/*.ts", "src/**/*.tsx"],
       exclude: ["src/**/*.stories.tsx", "src/main.tsx", "e2e/**/*"],
+      reporter: ["text", "json", "html"],
     },
     exclude: ["e2e/*.spec.ts"],
     include: ["src/**/*.test.ts", "src/**/*.test.tsx"],

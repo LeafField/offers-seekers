@@ -7,7 +7,7 @@ import { useStore } from "../store/useStore";
  */
 const useNavHidden = () => {
   const [hidden, setHidden] = useState<boolean>(false);
-  const { navOpen, setNavOpen } = useStore();
+  const { navOpen, setNavOpen, setTransition, transition } = useStore();
 
   useLayoutEffect(() => {
     if (window.innerWidth >= 767) {
@@ -17,14 +17,15 @@ const useNavHidden = () => {
     }
     window.addEventListener("resize", () => {
       setNavOpen(false);
+      setTransition(false);
       if (window.innerWidth >= 767) {
         setHidden(false);
       } else {
         setHidden(true);
       }
     });
-  }, [setHidden, setNavOpen]);
-  return { hidden, navOpen };
+  }, [setHidden, setNavOpen, setTransition]);
+  return { hidden, navOpen, transition };
 };
 
 export default useNavHidden;

@@ -12,6 +12,8 @@ type Store = {
   setResasParameters: (value: Partial<ResasParameters>) => void;
   navOpen: boolean;
   setNavOpen: (value: boolean) => void;
+  transition: boolean;
+  setTransition: (value: boolean) => void;
 };
 
 const resasParameters = {
@@ -32,4 +34,6 @@ export const useStore = create<Store>((set) => ({
     })),
   navOpen: false,
   setNavOpen: (value) => set({ navOpen: value }),
+  transition: false,
+  setTransition: (value) => set({ transition: value }),
 }));

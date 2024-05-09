@@ -3,10 +3,11 @@ import { useStore } from "../../store/useStore";
 import styles from "./MenuButton.module.css";
 
 const MenuButton: FC = () => {
-  const { navOpen, setNavOpen } = useStore();
+  const { navOpen, setNavOpen, setTransition } = useStore();
 
   const clickHandler = () => {
     setNavOpen(!navOpen);
+    setTransition(true);
   };
 
   return (
